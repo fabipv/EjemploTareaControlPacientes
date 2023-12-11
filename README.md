@@ -7,6 +7,8 @@ Control de pacientes implementado con TDA Lista.
 *   Se utilizó Replit para programar en C y se creó un repositorio en GitHub con el siguiente link: https://github.com/fabipv/EjemploTareaControlPacientes
 *   Para ejecutar el codigo comenzamos compilando nuestros archivos .c a traves de la terminal con el siguiente comando: `gcc -g main.c list.c `
 
+⭕ Consideren incorporar: Una descripción del paso a paso para compilar y ejecutar el código
+
 ---
 
 En esta aplicacion es implementada con una **lista enlazada**. Para esto se utiliza la siguiente estructura:
@@ -99,4 +101,19 @@ Funciones Implementadas:
     Si se selecciona la opción 4, esto hará que se muestre un mensaje por pantalla que indica que se está saliendo del programa, lo cual cierre la terminal y dará término a la ejecución del programa de control de pacientes.
 
 
+⭕ Consideren incorporar: 
+- Las funciones que generan problemas, por ejemplo no se exporta de manera correcta el archivo CVS.
+- Lo que se puede mejorara de su tarea/proyecto, por ejemplo leer la dirección con los espacios, quitar las tildes para no tener problemas al mostrar por pantalla la información de los pacientes y médicos.
+- Las contibuciones de cada intregrante, por ejemplo
+
+   **Juan Pérez:**
+        - Desarrolló las funciones básicas para registar paciente y quitar tildes.
+        - Diseño inicial de la interfaz de usuario.
+        - **Auto-evaluación**: 2 (Aporte bueno).
+
+   **María Rodríguez:**
+        - Implementó las funciones de importar y exportar CVS.
+        - Documentación y comentarios en el código.
+        - Diseño y redacción del README.
+        - **Auto-evaluación**: 3 (Aporte excelente).**
 
