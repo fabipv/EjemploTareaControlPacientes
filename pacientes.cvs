@@ -1,0 +1,19 @@
+Nombre,Apellido,Edad,Teléfono,Dirección,Num Seguridad Social,Médicos
+Juan,Pérez,35,12345678,Calle Falsa 123,12345678A,Dr. Juan González
+Maria,Rodriguez,25,87654321,Calle Falsa 456,87654321B,Dr. Maria Martínez;Dr. Juan González
+Pedro,González,29,11223344,Calle Falsa 789,11223344C,Dr. Pedro Jiménez
+Sandra,Martínez,32,44556677,Calle Falsa 321,44556677D,Dr. Sandra García
+Laura,García,28,99887766,Calle Falsa 654,99887766E,Dr. Laura Moreno
+Pablo,Moreno,31,55443322,Calle Falsa 987,55443322F,Dr. Pablo López
+Carlos,López,34,77665544,Calle Falsa 159,77665544G,Dr. Carlos Gómez
+Ana,Gómez,24,33221155,Calle Falsa 357,33221155H,Dr. Ana Sánchez
+Mario,Sánchez,30,66554477,Calle Falsa 741,66554477I,Dr. Mario Díaz
+Sofía,Díaz,27,44773366,Calle Falsa 852,44773366J,Dr. Sofía Álvarez
+Pablo,Álvarez,33,22331144,Calle Falsa 963,22331144K,Dr. Pablo Torres
+Cristina,Torres,26,11447733,Calle Falsa 174,11447733L,Dr. Cristina Moreno
+Alberto,Moreno,29,77332211,Calle Falsa 285,77332211M,Dr. Alberto Gómez
+Raquel,Gómez,32,33114477,Calle Falsa 396,33114477N,Dr. Raquel López
+Mario,López,28,44771133,Calle Falsa 507,44771133Ñ,Dr. Mario Martínez
+Sandra,Martínez,31,11334477,Calle Falsa 618,11334477O,Dr. Sandra González
+Pablo,González,34,77113344,Calle Falsa 729,77113344P,Dr. Pablo Pérez
+Ana,Pérez,24,33447711,Calle Falsa 840,33447711Q,Dr. Ana Rodriguez
