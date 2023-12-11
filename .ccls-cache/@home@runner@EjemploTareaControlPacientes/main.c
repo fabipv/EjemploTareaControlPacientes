@@ -32,6 +32,120 @@ void mostrarMenu() {
   puts("4) Salir.");
 }
 
+
+char* quitarTildes(char* cadena)
+{
+    const char *originales = "áéíóúÁÉÍÓÚ";
+    const char *reemplazos = "aeiouAEIOU";
+    char* nuevaCadena = (char*) malloc(strlen(cadena) + 1);
+
+    if (nuevaCadena == NULL) {
+        return NULL;
+    }
+
+    int j = 0;
+
+    for(int i = 0; cadena[i] != '\0'; i++)
+    {
+        bool conTilde = false;
+        bool flag = false;
+
+        for(int k = 0; originales[k] != '\0'; k++)
+        {
+            if(cadena[i] == originales[k])
+            {
+                if(!flag)
+                {
+                    i++;
+                }
+                else
+                {
+                    conTilde = true;
+                    nuevaCadena[j++] = reemplazos[k/2];
+                    break;
+                }
+
+                flag = true;
+            }
+        }
+
+        if(!conTilde)
+        {
+            nuevaCadena[j++] = cadena[i];
+        }
+    }
+
+    nuevaCadena[j] = '\0';
+    return nuevaCadena;
+}
+
+void registrarPaciente(List* listaPacientes, char* nombreAux, char* apellidoAux, int edadAux, char* telefonoAux, char* direccionAux, char* numSeguridadAux, List * medicosIngresados, int opcion)
+{
+    Paciente* p = (Paciente*) malloc(sizeof(Paciente));
+    Paciente* pacienteActual = firstList(listaPacientes);
+
+    if(opcion == 1)
+    {
+        while(pacienteActual != NULL)
+        {
+            if(strcmp(pacienteActual->numSeguridad, numSeguridadAux) == 0)
+            {
+                system("cls");
+
+                puts("==============================================");
+                puts("      El Paciente ya esta registrado.");
+                puts("==============================================");
+
+                sleep(2);
+                return;
+            }
+
+            pacienteActual = nextList(listaPacientes);
+        }
+
+        strcpy(p->nombre, nombreAux);
+        strcpy(p->apellido, apellidoAux);
+        p->edad = edadAux;
+        strcpy(p->telefono, telefonoAux);
+        strcpy(p->direccion, direccionAux);
+        strcpy(p->numSeguridad, numSeguridadAux);
+        p->medicosAsignados = medicosIngresados;
+
+        pushBack(listaPacientes, p);
+
+        system("cls");
+
+        puts("==============================================");
+        puts("   El Paciente se registro exitosamente.");
+        puts("==============================================");
+
+        sleep(2);
+    }
+    else
+    {
+        while(pacienteActual != NULL)
+        {
+            if(strcmp(pacienteActual->numSeguridad, numSeguridadAux) == 0)
+            {
+                return;
+            }
+
+            pacienteActual = nextList(listaPacientes);
+        }
+
+        strcpy(p->nombre, nombreAux);
+        strcpy(p->apellido, apellidoAux);
+        p->edad = edadAux;
+        strcpy(p->telefono, telefonoAux);
+        strcpy(p->direccion, direccionAux);
+        strcpy(p->numSeguridad, numSeguridadAux);
+        p->medicosAsignados = medicosIngresados;
+
+        pushBack(listaPacientes, p);
+    }
+}
+
+
 int main(int argc, char *argv[]) {
 
   int opcion;
@@ -128,26 +242,29 @@ int main(int argc, char *argv[]) {
       } while (respuestaMedicos != 1 && respuestaMedicos != 0);
 
       if (respuestaMedicos == 1) {
-        // registrarMedicos(medicosIngresados);
+        registrarMedicos(medicosIngresados);
       }
 
-      // registrarPaciente(listaPacientes, nombreAux, apellidoAux, edadAux,
-      // telefonoAux, direccionAux, numSeguridadAux, medicosIngresados, 1);
+      registrarPaciente(listaPacientes, nombreAux, apellidoAux, edadAux, telefonoAux, direccionAux, numSeguridadAux, medicosIngresados, 1);
       break;
+      
     case 2:
       system("cls");
-      // importarCsvPaciente(listaPacientes);
+      importarCsvPaciente(listaPacientes);
       break;
+      
     case 3:
       system("cls");
-      // exportarCsvPaciente(listaPacientes);
+      exportarCsvPaciente(listaPacientes);
       break;
+      
     case 4:
       system("cls");
       printf("Saliendo...\n");
       sleep(2);
       system("cls");
       break;
+      
     default:
       printf("\nOpcion no valida. Intente nuevamente.\n\n");
       system("pause");
