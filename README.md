@@ -107,13 +107,20 @@ Funciones Implementadas:
 - Las contibuciones de cada intregrante, por ejemplo
 
    **Juan Pérez:**
+  
         - Desarrolló las funciones básicas para registar paciente y quitar tildes.
+  
         - Diseño inicial de la interfaz de usuario.
-        - **Auto-evaluación**: 2 (Aporte bueno).
+  
+        - Auto-evaluación: 2 (Aporte bueno).
 
    **María Rodríguez:**
+  
         - Implementó las funciones de importar y exportar CVS.
+  
         - Documentación y comentarios en el código.
+  
         - Diseño y redacción del README.
-        - **Auto-evaluación**: 3 (Aporte excelente).**
+  
+        - Auto-evaluación: 3 (Aporte excelente).**
 
